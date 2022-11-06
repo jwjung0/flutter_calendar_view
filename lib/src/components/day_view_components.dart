@@ -10,6 +10,8 @@ import '../extensions.dart';
 import '../typedefs.dart';
 import 'common_components.dart';
 
+const weekKr = ['월','화','수','목','금','토','일'];   // customer added
+
 /// This class defines default tile to display in day view.
 class RoundedEventTile extends StatelessWidget {
   /// Title of the tile.
@@ -138,7 +140,8 @@ class DayPageHeader extends CalendarPageHeader {
           textStyle: textStyle,
         );
   static String _dayStringBuilder(DateTime date, {DateTime? secondaryDate}) =>
-      "${date.day} - ${date.month} - ${date.year}";
+      // "${date.day} - ${date.month} - ${date.year}";   // original
+      "${date.year}년 ${date.month}월 ${date.day}일 ${weekKr[date.weekday-1]}요일";   // custom modified
 }
 
 class DefaultTimeLineMark extends StatelessWidget {

@@ -448,6 +448,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
       onPreviousMonth: previousPage,
       date: date,
       dateStringBuilder: widget.headerStringBuilder,
+      textStyle: TextStyle(fontSize: 20),
       onNextMonth: nextPage,
     );
   }

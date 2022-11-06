@@ -318,6 +318,7 @@ class DayViewState<T extends Object?> extends State<DayView<T>> {
               _dayTitleBuilder(_currentDate),
               Expanded(
                 child: SingleChildScrollView(
+                  physics: BouncingScrollPhysics(),
                   controller: _scrollController,
                   child: SizedBox(
                     height: _height,
@@ -496,6 +497,7 @@ class DayViewState<T extends Object?> extends State<DayView<T>> {
   Widget _defaultDayBuilder(DateTime date) {
     return DayPageHeader(
       date: _currentDate,
+      textStyle: TextStyle(fontSize: 20),
       dateStringBuilder: widget.dateStringBuilder,
       onNextDay: nextPage,
       onPreviousDay: previousPage,

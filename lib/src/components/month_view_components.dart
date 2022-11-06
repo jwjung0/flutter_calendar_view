@@ -217,7 +217,8 @@ class MonthPageHeader extends CalendarPageHeader {
           textStyle: textStyle,
         );
   static String _monthStringBuilder(DateTime date, {DateTime? secondaryDate}) =>
-      "${date.month} - ${date.year}";
+      // "${date.month} - ${date.year}";  // original
+      "${date.year}년 ${date.month}월";   // custom modified
 }
 
 class WeekDayTile extends StatelessWidget {
