@@ -67,7 +67,7 @@ class RoundedEventTile extends StatelessWidget {
         borderRadius: borderRadius,
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           if (title.isNotEmpty)
@@ -76,27 +76,27 @@ class RoundedEventTile extends StatelessWidget {
                 title,
                 style: titleStyle ??
                     TextStyle(
-                      fontSize: 20,
+                      fontSize: 14,
                       color: backgroundColor.accent,
                     ),
                 softWrap: true,
-                overflow: TextOverflow.fade,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
-          if (description.isNotEmpty)
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 15.0),
-                child: Text(
-                  description,
-                  style: descriptionStyle ??
-                      TextStyle(
-                        fontSize: 17,
-                        color: backgroundColor.accent.withAlpha(200),
-                      ),
-                ),
-              ),
-            ),
+          // if (description.isNotEmpty)
+          //   Expanded(
+          //     child: Padding(
+          //       padding: const EdgeInsets.only(bottom: 15.0),
+          //       child: Text(
+          //         description,
+          //         style: descriptionStyle ??
+          //             TextStyle(
+          //               fontSize: 12,
+          //               color: backgroundColor.accent.withAlpha(200),
+          //             ),
+          //       ),
+          //     ),
+          //   ),
           if (totalEvents > 1)
             Expanded(
               child: Text(

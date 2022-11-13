@@ -171,6 +171,7 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                                   events[index].title,
                                   overflow: TextOverflow.clip,
                                   maxLines: 1,
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                     color: events[index].color.accent,
                                     fontSize: 12,

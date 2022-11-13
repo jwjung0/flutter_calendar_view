@@ -257,7 +257,7 @@ class WeekViewState<T extends Object?> extends State<WeekView<T>> {
     _scrollController =
         ScrollController(initialScrollOffset: widget.scrollOffset);
     _pageController = PageController(initialPage: _currentIndex);
-    _eventArranger = widget.eventArranger ?? SideEventArranger<T>();
+    _eventArranger = widget.eventArranger ?? StackEventArranger<T>();
 
     _assignBuilders();
   }
@@ -308,7 +308,7 @@ class WeekViewState<T extends Object?> extends State<WeekView<T>> {
       _pageController.jumpToPage(_currentIndex);
     }
 
-    _eventArranger = widget.eventArranger ?? SideEventArranger<T>();
+    _eventArranger = widget.eventArranger ?? StackEventArranger<T>();
 
     // Update heights.
     _calculateHeights();

@@ -9,6 +9,7 @@ import '../extensions.dart';
 
 part 'merge_event_arranger.dart';
 part 'side_event_arranger.dart';
+part 'stack_event_arranger.dart';
 
 abstract class EventArranger<T extends Object?> {
   /// [EventArranger] defines how simultaneous events will be arranged.

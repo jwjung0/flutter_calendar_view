@@ -81,12 +81,12 @@ List<CalendarEventData<Event>> _events = [
         _now.subtract(Duration(days: 2)).year,
         _now.subtract(Duration(days: 2)).month,
         _now.subtract(Duration(days: 2)).day,
-        14),
+        8),
     endTime: DateTime(
         _now.subtract(Duration(days: 2)).year,
         _now.subtract(Duration(days: 2)).month,
         _now.subtract(Duration(days: 2)).day,
-        16),
+        11),
     event: Event(title: "Team Meeting"),
     title: "Team Meeting",
     description: "Team Meeting",
@@ -106,5 +106,21 @@ List<CalendarEventData<Event>> _events = [
     event: Event(title: "Chemistry Viva"),
     title: "Chemistry Viva",
     description: "Today is Joe's birthday.",
+  ),
+  CalendarEventData(
+    date: _now.subtract(Duration(days: 2)),
+    startTime: DateTime(
+        _now.subtract(Duration(days: 2)).year,
+        _now.subtract(Duration(days: 2)).month,
+        _now.subtract(Duration(days: 2)).day,
+        7),
+    endTime: DateTime(
+        _now.subtract(Duration(days: 2)).year,
+        _now.subtract(Duration(days: 2)).month,
+        _now.subtract(Duration(days: 2)).day,
+        13),
+    event: Event(title: "title1"),
+    title: "test1",
+    description: "test",
   ),
 ];

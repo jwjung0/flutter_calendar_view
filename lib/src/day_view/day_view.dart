@@ -236,7 +236,7 @@ class DayViewState<T extends Object?> extends State<DayView<T>> {
     _scrollController =
         ScrollController(initialScrollOffset: widget.scrollOffset);
     _pageController = PageController(initialPage: _currentIndex);
-    _eventArranger = widget.eventArranger ?? SideEventArranger<T>();
+    _eventArranger = widget.eventArranger ?? StackEventArranger<T>();
     _assignBuilders();
   }
 
@@ -284,7 +284,7 @@ class DayViewState<T extends Object?> extends State<DayView<T>> {
       _pageController.jumpToPage(_currentIndex);
     }
 
-    _eventArranger = widget.eventArranger ?? SideEventArranger<T>();
+    _eventArranger = widget.eventArranger ?? StackEventArranger<T>();
 
     // Update heights.
     _calculateHeights();
