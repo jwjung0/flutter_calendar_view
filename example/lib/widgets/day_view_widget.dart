@@ -18,7 +18,12 @@ class DayViewWidget extends StatelessWidget {
     return DayView<Event>(
       key: state,
       width: width,
+      minDay: DateTime(2000),
+      maxDay: DateTime(2200),
       eventArranger: StackEventArranger(),
+      onDateLongPress: (date) {
+        print('---> day > date: $date');
+      },
     );
   }
 }

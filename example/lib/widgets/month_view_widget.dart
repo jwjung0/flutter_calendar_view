@@ -18,6 +18,9 @@ class MonthViewWidget extends StatelessWidget {
     return MonthView<Event>(
       key: state,
       width: width,
+      onCellTap: (event, date) {
+        print('---> month > date: $date');
+      },
     );
   }
 }
